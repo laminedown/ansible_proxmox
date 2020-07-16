@@ -1,0 +1,13 @@
+---
+- hosts:  proxmox
+  tasks: 
+  - name: 'création de vm'
+    proxmox:
+      node: 'ns528891'
+      api_user: 'root@pam'
+      api_password: 'r00t!'
+      api_host: '198.245.63.87'
+      ostemplate: 'local:vztmpl/ubuntu-14.04-x86_64.tar.gz'
+      force: yes
+
+
